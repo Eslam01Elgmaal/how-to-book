@@ -1,0 +1,14 @@
+<h2> welcome in our page</h2>
+
+<hr>
+
+    <a href="{% url 'home:new_course' %}">add new course</a> 
+
+<hr>
+
+{% for course in all_courses %}
+    <h4>
+    <a href="{% url 'home:course' course.id %}">{{course.cour_name}}</a> 
+    </h4>
+{% endfor %}
+
