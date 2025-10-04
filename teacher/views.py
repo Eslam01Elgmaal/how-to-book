@@ -57,6 +57,13 @@ def course_new(request):
 
 
 
+def course_del(request, id):
+    lesson = Courses.objects.get(id=id)
+    lesson.delete()
+    return redirect("home:courses") 
+
+
+
 
 """
 

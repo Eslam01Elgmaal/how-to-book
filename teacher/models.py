@@ -22,7 +22,7 @@ class Courses(models.Model):
 
     cour_name = models.CharField(max_length=60)
     cour_date = models.DateField(default=datetime.date.today)
-    cour_price = models.DecimalField(max_digits=5, decimal_places=2)
+    cour_price = models.DecimalField(max_digits=10, decimal_places=2)
     teachar_conf = models.ForeignKey("Teacher",on_delete=models.CASCADE, related_name="courses")
 
 
